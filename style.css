@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.hover-box {
+  width: 200px;
+  height: 100px;
+  background-color: #ecf0f1;
+  border: 2px solid #bdc3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.hover-box.hovered {
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+}
+
+.keypress-result {
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #dff9fb;
+  border-radius: 4px;
+  border: 1px solid #7ed6df;
+}
+
+.secret-result {
+  margin-top: 10px;
+  font-style: italic;
+  color: #e74c3c;
+}
+
+.gallery {
+  margin: 20px 0;
+  max-width: 320px;
+  position: relative;
+}
+
+.gallery-image {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-image.active {
+  display: block;
+  opacity: 1;
+}
+
+.gallery-controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  background-color: #bdc3c7;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  border: 2px solid #3498db;
+  border-top: none;
+  padding: 15px;
+  display: none;
+  border-radius: 0 0 4px 4px;
+  background-color: white;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  height: 1.2em;
+  margin-top: 2px;
+  display: block;
+}
+
+.form-success {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  min-height: 1.2em;
+}
+
+/* Bonus animation for button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(52, 152, 219, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1.5s infinite;
+}
